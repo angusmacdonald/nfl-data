@@ -47,7 +47,7 @@ def writeTdEntriesToFile(resultsFileName, rows, entryMarker, strToAppend):
 	with open(resultsFileName, "a") as results:
 		for row in data:
 			if (len(row) > 0):
-				results.write(", ".join([str(x[0]) for x in row]))
+				results.write(", ".join([str(x[0]).replace(",", "") for x in row]))
 				results.write(strToAppend)
 				results.write("\n")
 
