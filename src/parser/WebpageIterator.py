@@ -19,7 +19,7 @@ def getNflData(urlPrefix, startYear, endYear):
 		print "Saving results to " + resultDest
 
 		GetData.downloadWebpage(fullUrl, tmpDest)
-		DataParser.parseTableToCSV(tmpDest, resultDest)
+		DataParser.parseTableToCSV(tmpDest, resultDest, year)
 
 		deleteFileIfExists(tmpDest)
 
