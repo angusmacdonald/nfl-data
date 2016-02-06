@@ -1,6 +1,8 @@
 import urllib
 import sys
 
+import os
+
 """
 Download the contents of a webpage, saving it
 to the given file location.
