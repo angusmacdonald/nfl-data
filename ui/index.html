@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Packers Receiver Stats Visualized</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+
+   
+    <script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/load-spie.js"></script>
+        
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="page-header">
+        <h1>Packers Receiver Stats Visualized</h1>
+        <p class="lead">A visual analysis of the Packers offensive production over the last three years.</p>
+      </div>
+
+      <h3>Three Years of YAC</h3>
+      <p>The following spie charts show receiving yards per wide receiver, with YAC indicated by the outer slice on each segment. The width of each segment is based on the relative number of receptions, the length of each segment is based on the relative number of receiving yards.</p>
+      <div class="row">
+        <div class="col-md-4">
+          <div id="canvas-holder" style="width:100%">
+                <canvas id="chart-area" width="300" height="300"/>
+          </div>
+          <div style="text-align: center;">2015</div>
+        </div>
+        <div class="col-md-4">
+          <div id="canvas-holder" style="width:100%">
+                <canvas id="chart-area-2" width="300" height="300"/>
+          </div>
+          <div style="text-align: center;">2014</div>
+        </div>
+        <div class="col-md-4">
+          <div id="canvas-holder" style="width:100%">
+                <canvas id="chart-area-3" width="300" height="300"/>
+          </div>
+          <div style="text-align: center;">2013</div>
+        </div>
+      </div>
+      
+
+      <h3>Notes</h3>
+      <p class="text-warning">It's hard to visualize YAC for running backs, because the stats produced by various outlets always shows a much higher YAC than the number of receptions. I'm not entirely sure why this is, but it means that this visualization shows all running back yards as consisting entirely of YAC.</p>
+
+      <hr>
+
+
+
+    </div> <!-- /container -->
+
+     <script>
+        loadSpieFromLocation("http://localhost/data/results-2015.json", "chart-area");
+        loadSpieFromLocation("http://localhost/data/results-2014.json", "chart-area-2");
+        loadSpieFromLocation("http://localhost/data/results-2013.json", "chart-area-3");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+[
+    {
+        "label": "Jordy Nelson",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 19.514348785871963,
+                "highlight": "#F0AE1A",
+                "label": "442 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 38.498896247240616,
+                "highlight": "#234D42",
+                "label": "872 yards in air"
+            }
+        ],
+        "width": 23.28767123287671
+    },
+    {
+        "label": "James Jones",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 16.95364238410596,
+                "highlight": "#F0AE1A",
+                "label": "384 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 19.116997792494484,
+                "highlight": "#234D42",
+                "label": "433 yards in air"
+            }
+        ],
+        "width": 16.164383561643834
+    },
+    {
+        "label": "Eddie Lacy",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 11.346578366445916,
+                "highlight": "#F0AE1A",
+                "label": "321 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 0.0,
+                "highlight": "#234D42",
+                "label": "0 yards in air"
+            }
+        ],
+        "width": 9.58904109589041
+    },
+    {
+        "label": "Jarrett Boykin",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 11.434878587196469,
+                "highlight": "#F0AE1A",
+                "label": "259 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 18.631346578366443,
+                "highlight": "#234D42",
+                "label": "422 yards in air"
+            }
+        ],
+        "width": 13.424657534246576
+    },
+    {
+        "label": "Jermichael Finley",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 10.419426048565121,
+                "highlight": "#F0AE1A",
+                "label": "236 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 2.8256070640176607,
+                "highlight": "#234D42",
+                "label": "64 yards in air"
+            }
+        ],
+        "width": 6.8493150684931505
+    },
+    {
+        "label": "Randall Cobb",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 8.344370860927151,
+                "highlight": "#F0AE1A",
+                "label": "189 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 10.772626931567329,
+                "highlight": "#234D42",
+                "label": "244 yards in air"
+            }
+        ],
+        "width": 8.493150684931507
+    },
+    {
+        "label": "Andrew Quarless",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 6.225165562913907,
+                "highlight": "#F0AE1A",
+                "label": "141 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 7.549668874172186,
+                "highlight": "#234D42",
+                "label": "171 yards in air"
+            }
+        ],
+        "width": 8.767123287671232
+    },
+    {
+        "label": "James Starks",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 10,
+                "highlight": "#F0AE1A",
+                "label": "111 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 0,
+                "highlight": "#234D42",
+                "label": "0 yards in air"
+            }
+        ],
+        "width": 2.73972602739726
+    },
+    {
+        "label": "John Kuhn",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 10,
+                "highlight": "#F0AE1A",
+                "label": "88 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 0,
+                "highlight": "#234D42",
+                "label": "0 yards in air"
+            }
+        ],
+        "width": 3.5616438356164384
+    },
+    {
+        "label": "Brandon Bostick",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 5.333333333333333,
+                "highlight": "#F0AE1A",
+                "label": "64 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 4.666666666666667,
+                "highlight": "#234D42",
+                "label": "56 yards in air"
+            }
+        ],
+        "width": 1.9178082191780823
+    },
+    {
+        "label": "Myles White",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 8.484848484848484,
+                "highlight": "#F0AE1A",
+                "label": "56 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 1.515151515151515,
+                "highlight": "#234D42",
+                "label": "10 yards in air"
+            }
+        ],
+        "width": 2.4657534246575343
+    },
+    {
+        "label": "Johnathan Franklin",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 9.0,
+                "highlight": "#F0AE1A",
+                "label": "27 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 0.9999999999999998,
+                "highlight": "#234D42",
+                "label": "3 yards in air"
+            }
+        ],
+        "width": 1.095890410958904
+    },
+    {
+        "label": "Ryan Taylor",
+        "slices": [
+            {
+                "color": "#FFB612",
+                "height": 5.666666666666666,
+                "highlight": "#F0AE1A",
+                "label": "17 yards after catch"
+            },
+            {
+                "color": "#203731",
+                "height": 4.333333333333334,
+                "highlight": "#234D42",
+                "label": "13 yards in air"
+            }
+        ],
+        "width": 1.643835616438356
+    }
+]
