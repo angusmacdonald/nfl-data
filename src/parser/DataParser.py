@@ -13,21 +13,21 @@ def parseTableToCSV(inputFilename, resultsFileName, year):
 	with open (inputFilename) as datafile:
 		content = datafile.read().replace('\n', '')
 
-	# Delete any existing results file:
-	deleteFileIfExists(resultsFileName)
-
 	soup = BeautifulSoup(content, "lxml")
 
 	# Find the table element, then iterate over entries:
 	table = soup.find("table")
 
 	# Information to append to line
-	headerToAppend = ", Year"
+	headerToAppend = ", YEAR"
 	dataToAppend = ", {}".format(year)
 
 	# Write header then data to results file:
-	writeTdEntriesToFile(resultsFileName, table.findAll("tr"), "th", headerToAppend)
-	writeTdEntriesToFile(resultsFileName, table.findAll("tr"), "td", dataToAppend)
+	
+	entriesParsed = writeTdEntriesToFile(resultsFileName, table.findAll("tr"), "td", dataToAppend, headerToAppend)
+
+	return entriesParsed
+
 
 """
 Iterate over all td elements in every table row (tr), and write
@@ -38,18 +38,37 @@ Args:
 	rows: BeautifulSoup rows
 	entryMarker: what an entry in the row is identified as (td or th)
 	strToAppend (str): string to add to end of each line
+	headerToAppend (str): string to add to the end of the header (first) line
 
+Return:
+	The number of entries parsed on this page.
 """
-def writeTdEntriesToFile(resultsFileName, rows, entryMarker, strToAppend):
+def writeTdEntriesToFile(resultsFileName, rows, entryMarker, strToAppend, headerToAppend):
 	data = [[td.findChildren(text=True) for td in tr.findAll(entryMarker)] for tr in rows]
+
+	entriesParsed = 0
+
+	firstRow = True
+	valToAppend = headerToAppend
 
 	# Write entries to disk, comma separated:
 	with open(resultsFileName, "a") as results:
 		for row in data:
 			if (len(row) > 0):
-				results.write(", ".join([str(x[0]).replace(",", "") for x in row]))
-				results.write(strToAppend)
-				results.write("\n")
+				
+				if (str(row[1][0]) != "PLAYER" or firstRow): # Ignore the header format
+					results.write(", ".join([x[0].encode('utf-8').replace(",", "") for x in row[1:20]]))
+					results.write(valToAppend)
+					results.write("\n")
+
+					if firstRow:
+						firstRow = False
+						valToAppend = strToAppend
+					else:
+						entriesParsed += 1			
+
+	return entriesParsed
+
 
 def deleteFileIfExists(filename):
 	try:

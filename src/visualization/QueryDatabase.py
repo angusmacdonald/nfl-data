@@ -15,7 +15,7 @@ def createSpieChartOutput(databaseName, collectionName, year):
 	return result
 
 def outputSpieChartForTeamYear(receiving, year, team):
-	cursor = receiving.find( { "$and": [ { "Team": team }, { "Year": year } ] } )
+	cursor = receiving.find( { "$and": [ { "TEAM": team }, { "YEAR": year } ] } )
 
 	result = []
 
@@ -23,8 +23,8 @@ def outputSpieChartForTeamYear(receiving, year, team):
 	totalYards = 0
 
 	for player in cursor:
-		totalReceptionNumbers += player['Rec']
-		totalYards += player['Rec Yards']
+		totalReceptionNumbers += player['REC']
+		totalYards += player['YDS']
 
 	print totalYards
 	print totalReceptionNumbers
@@ -61,25 +61,28 @@ def outputSpieChartForTeamYear(receiving, year, team):
 
 		playerRes = {}
 
-		playerRes['width'] = (player['Rec'] / float(totalReceptionNumbers)) * 100
- 		playerRes['label'] = str(player['Player'])
+		playerRes['width'] = (player['REC'] / float(totalReceptionNumbers)) * 100
+ 		playerRes['label'] = str(player['PLAYER'])
 
- 		height = ((player['Rec Yards'] / float(totalYards)) * 100) * 2
+ 		height = max(10, ((player['YDS'] / float(totalYards)) * 100) * 2)
  		
- 		percentageYac = min (1, player['YAC'] / float(player['Rec Yards']))
+ 		percentageYac = min (1, player['YAC'] / float(player['YDS']))
  		percentageNonYac = 1- percentageYac
 
 		print percentageNonYac
  		sliceNonYac = {}
 
  		sliceNonYac['height'] = height * percentageNonYac
- 		sliceNonYac['color'] = "#4AE85D"
- 		sliceNonYac['label'] = "{} yards in air".format(max(0, player['Rec Yards']-player['YAC']))
+ 		sliceNonYac['color'] = "#203731"
+ 		sliceNonYac['highlight'] = "#234D42"
+ 		sliceNonYac['label'] = "{} yards in air".format(max(0, player['YDS']-player['YAC']))
 
  		sliceYac = {}
 
  		sliceYac['height'] = height * percentageYac
- 		sliceYac['color'] = "#20D635"
+ 		sliceYac['color'] = "#FFB612"
+ 		sliceYac['highlight'] = "#F0AE1A"
+ 	
  		sliceYac['label'] = "{} yards after catch".format(player['YAC'])
 
  		playerRes['slices'] = [sliceYac, sliceNonYac]
