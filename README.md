@@ -1,2 +1,3 @@
-# nfl-data
-Parser and related code for extracting NFL data
+# NFL Receiver Data Scraper / Parser
+
+Utility to scrape data on receptions of NFL players from the internet and add it to a local MongoDB instance.
