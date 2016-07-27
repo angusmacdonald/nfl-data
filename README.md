@@ -4,5 +4,6 @@ Utility to scrape data on receptions of NFL players from the internet and add it
 
 ## Example Queries
 Once the data is stored in the database it can be queried. For example:
-    db.receiving.find( { $and: [ { Team: "GB" }, { Year: 2015 } ] } )
-
+```
+db.receiving.find( { $and: [ { Team: "GB" }, { Year: 2015 } ] } )
+```
